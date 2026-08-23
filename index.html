@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="th" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Knowledge Map — Finance · Quant · ML · AI</title>
+<meta name="description" content="แผนที่รวมคอร์ส หนังสือ งานวิจัย และ datasets ฟรี สำหรับ Finance, Investment, Quant, Trading, Econometrics, Portfolio, Microstructure, Machine Learning และ AI">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">🗺️ <span>Knowledge&nbsp;Map</span></a>
+    <div class="searchbox">
+      <span class="s-icon">🔍</span>
+      <input id="q" type="search" placeholder="ค้นหา  เช่น volatility, Damodaran, 18.642, backtest…  (กด / )" aria-label="ค้นหา">
+    </div>
+    <div class="topbar-right">
+      <span id="stats" class="stats" title="รายการที่แสดง / ทั้งหมด"></span>
+      <button id="themeBtn" class="iconbtn" title="สลับโหมดสว่าง/มืด">🌙</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout" id="top">
+
+  <aside class="sidebar" id="sidebar">
+    <nav id="nav" class="nav" aria-label="Sections"></nav>
+    <div class="side-block">
+      <h4>ระดับความสำคัญ <span class="hint">(เลือกได้หลายอัน)</span></h4>
+      <div id="tagFilters" class="tagfilters"></div>
+      <button id="clearBtn" class="clearbtn">ล้างตัวกรองทั้งหมด</button>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <section class="hero">
+      <h1>Free Knowledge <span class="grad">Map</span></h1>
+      <p class="sub">Finance · Investment · Quant · Trading · Financial Mathematics · Econometrics · Portfolio Construction · Market Microstructure · Machine Learning · AI</p>
+      <p class="tagline" id="tagline"></p>
+      <div class="metachips" id="metachips"></div>
+      <div class="access" id="access"></div>
+    </section>
+
+    <div id="content"></div>
+
+    <section class="panel" id="pathsPanel">
+      <h2 class="section-h"><span class="icon">🧭</span> Shortest Path — เส้นทางลัดตามเป้าหมาย</h2>
+      <p class="section-sub">ถ้ามีพื้นฐานอยู่แล้ว ไม่ต้องเรียนหลายสิบอย่าง — เลือกตาม objective ก็พอ</p>
+      <div class="paths" id="paths"></div>
+    </section>
+
+    <section class="panel" id="methodPanel">
+      <h2 class="section-h"><span class="icon">⚠️</span> <span id="methodTitle"></span></h2>
+      <p class="lead" id="methodLead"></p>
+      <div class="method-grid">
+        <div class="method-col">
+          <h3>คำถามที่ควรถามก่อนเชื่อ backtest</h3>
+          <ul class="asked" id="asked"></ul>
+          <ul class="facts" id="facts"></ul>
+        </div>
+        <div class="method-col">
+          <h3 id="checklistTitle"></h3>
+          <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+          <p class="progress-label" id="progressLabel"></p>
+          <ul class="checklist" id="checklist"></ul>
+        </div>
+      </div>
+      <div class="principles" id="principles"></div>
+    </section>
+
+    <section class="panel" id="notCoveredPanel">
+      <h2 class="section-h"><span class="icon">🚧</span> <span id="notCoveredTitle"></span></h2>
+      <ul class="notcovered" id="notCovered"></ul>
+      <p class="notcovered-note" id="notCoveredNote"></p>
+    </section>
+
+    <footer class="footer">
+      <p id="footCopyright"></p>
+      <p id="footDisclaimer"></p>
+      <p class="foot-meta" id="footMeta"></p>
+    </footer>
+
+  </main>
+</div>
+
+<a href="#top" class="totop" id="totop" title="กลับขึ้นด้านบน">↑</a>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
