@@ -322,8 +322,16 @@
     `Free Knowledge Map — material ส่วนใหญ่เป็นของ MIT, Stanford, Yale, NYU, Columbia, Berkeley, Caltech และงานที่อาจารย์/นักวิจัย/practitioner เปิดให้เรียนฟรีเอง · ระดับ material: undergraduate → PhD/research · Last link check: ${KM.meta.lastCheck}`;
 
   // ---------- search ----------
+  const qEl = document.getElementById("q");
+  const setPlaceholder = () => {
+    qEl.placeholder = window.innerWidth <= 640
+      ? "ค้นหาคอร์ส / หนังสือ / ผู้แต่ง…"
+      : "ค้นหาคอร์ส / หนังสือ / ผู้แต่ง / สถาบัน… (กด / เพื่อโฟกัส)";
+  };
+  setPlaceholder();
+  window.addEventListener("resize", setPlaceholder);
   let debounce;
-  document.getElementById("q").addEventListener("input", e => {
+  qEl.addEventListener("input", e => {
     clearTimeout(debounce);
     debounce = setTimeout(() => {
       state.q = e.target.value.trim().toLowerCase();
