@@ -14,7 +14,13 @@ const KM = {
     recheck: "2026-08-23 (auto: 95 OK · 5 bot-blocked ใช้ได้บน browser จริง)",
     level: "Undergraduate → Master's → PhD coursework & research",
     note: "นี่คือ knowledge map ไม่ใช่ syllabus — ไม่ได้เรียงตามความยาก และไม่จำเป็นต้องเรียนทั้งหมด กระโดดไป track ที่เกี่ยวกับสิ่งที่ตัวเองทำได้เลย",
-    selectionNote: "เลือก official university pages, author-hosted material, direct working-paper PDFs และ legal open resources ก่อน SSRN หรือ landing page ที่ต้อง login"
+    selectionNote: "เลือก official university pages, author-hosted material, direct working-paper PDFs และ legal open resources ก่อน SSRN หรือ landing page ที่ต้อง login",
+    source: {
+      page: "JRT Desk พาXวย",
+      platform: "เพจ Facebook",
+      url: "https://www.facebook.com/share/1cjWfdGm39/?mibextid=wwXIfr",
+      note: "ลิสต์หนังสือและคอร์สต้นฉบับรวบรวมและคัดสกรีนโดยเจ้าของเพจ — เว็บนี้นำมาจัดระเบียบเป็น knowledge map ให้ค้นหา/กรองได้ง่ายขึ้น"
+    }
   },
 
   access: [
@@ -36,9 +42,9 @@ const KM = {
 
   // ============================ FOUNDATION ============================
   {
-    id: "F", icon: "🧱", accent: "#94a3b8",
-    name: "Foundation",
-    th: "พื้นฐานคณิตศาสตร์ & สถิติ",
+    id: "F", icon: "layers", accent: "#94a3b8",
+    name: "พื้นฐานคณิตศาสตร์และสถิติ",
+    th: "Foundation — Linear Algebra · Probability · Statistics",
     intro: "ข้ามได้ถ้ามีพื้นฐานอยู่แล้ว",
     groups: [
       {
@@ -78,9 +84,9 @@ const KM = {
 
   // ============================ TRACK A ============================
   {
-    id: "A", icon: "💼", accent: "#60a5fa",
-    name: "Track A — Investment, Valuation, Portfolio & Asset Pricing",
-    th: "เหมาะกับ investor, analyst, PM, allocator หรือคนที่อยากเข้าใจ valuation, expected return, risk, portfolio construction ให้ลึกขึ้น",
+    id: "A", icon: "briefcase", accent: "#60a5fa",
+    name: "การลงทุน การประเมินมูลค่า และ Asset Pricing",
+    th: "Investment, Valuation, Portfolio & Asset Pricing — เหมาะกับ investor, analyst, PM, allocator หรือคนที่อยากเข้าใจ valuation, expected return, risk, portfolio construction ให้ลึกขึ้น",
     groups: [
       {
         g: "Accounting & Core Finance",
@@ -176,9 +182,9 @@ const KM = {
 
   // ============================ TRACK B ============================
   {
-    id: "B", icon: "📈", accent: "#2dd4bf",
-    name: "Track B — Quant Research, Trading, Derivatives & Execution",
-    th: "Financial mathematics, econometrics, research validation, optimization, risk, microstructure, execution, options & volatility",
+    id: "B", icon: "trend", accent: "#2dd4bf",
+    name: "Quant Research, Derivatives และ Execution",
+    th: "Quant Research, Trading, Derivatives & Execution — Financial mathematics, econometrics, research validation, optimization, risk, microstructure, execution, options & volatility",
     groups: [
       {
         g: "Financial Mathematics",
@@ -386,9 +392,9 @@ const KM = {
 
   // ============================ TRACK C ============================
   {
-    id: "C", icon: "🤖", accent: "#a78bfa",
-    name: "Track C — Machine Learning for Quantitative Research",
-    th: "ต่างจาก Track D — เป้าหมายคือใช้ statistical learning กับ financial data ไม่ใช่เรียน AI เพียงเพราะ AI กำลังดัง",
+    id: "C", icon: "cpu", accent: "#a78bfa",
+    name: "Machine Learning เพื่องานวิจัยการเงินเชิงปริมาณ",
+    th: "Machine Learning for Quantitative Research — ต่างจากหมวด AI สมัยใหม่ (Deep Learning & LLM): เป้าหมายคือใช้ statistical learning กับ financial data ไม่ใช่เรียน AI เพียงเพราะ AI กำลังดัง",
     groups: [
       {
         g: "ML Foundation",
@@ -455,9 +461,9 @@ const KM = {
 
   // ============================ TRACK D ============================
   {
-    id: "D", icon: "🧠", accent: "#fb923c",
-    name: "Track D — Modern AI, Deep Learning & LLM",
-    th: "มี value สำหรับ AI literacy, engineering, research และการเข้าใจ modern technology — แต่ไม่ได้เป็น prerequisite ของการเป็น investor หรือ trader ที่ดี",
+    id: "D", icon: "spark", accent: "#fb923c",
+    name: "AI สมัยใหม่: Deep Learning และ LLM",
+    th: "Modern AI, Deep Learning & LLM — มี value สำหรับ AI literacy, engineering, research และการเข้าใจ modern technology แต่ไม่ได้เป็น prerequisite ของการเป็น investor หรือ trader ที่ดี",
     groups: [
       {
         g: "Neural Networks from First Principles",
@@ -549,9 +555,9 @@ const KM = {
 
   // ============================ DATA ============================
   {
-    id: "DATA", icon: "🗄️", accent: "#4ade80",
-    name: "Free Data & Research Infrastructure",
-    th: "แหล่งข้อมูลฟรีสำหรับ empirical research",
+    id: "DATA", icon: "database", accent: "#4ade80",
+    name: "ฐานข้อมูลและโครงสร้างพื้นฐานวิจัยฟรี",
+    th: "Free Data & Research Infrastructure — แหล่งข้อมูลฟรีสำหรับ empirical research",
     quick: true,
     groups: [
       {
@@ -573,16 +579,16 @@ const KM = {
 
   // ============================ SHORTEST PATHS ============================
   paths: [
-    { icon: "💼", title: "Investment / Portfolio Management", steps: ["MIT 15.401 Finance Theory I", "Damodaran (NYU)", "Cochrane — Asset Pricing", "MIT 18.642", "Stanford EE364A", "Haugh — Quantitative Risk Management", "Open Asset Pricing / JKP / AQR Data"] },
-    { icon: "🏛️", title: "Fundamental Investing / Valuation", steps: ["MIT Financial Accounting (ถ้าจำเป็น)", "MIT 15.401", "Damodaran", "Cochrane (ตามความต้องการด้าน Asset Pricing)", "Empirical datasets ตาม strategy"] },
-    { icon: "🔬", title: "Systematic Alpha Research", steps: ["MIT 18.642", "Sheppard — Financial Econometrics", "MIT 14.384 (ตามความจำเป็น)", "Harvey/Liu + HLZ + PBO + Deflated Sharpe", "Backtesting Protocol (Arnott-Harvey-Markowitz)", "Open Source Asset Pricing + JKP", "Stanford CS229", "Gu-Kelly-Xiu", "Kelly-Xiu"] },
-    { icon: "🧮", title: "Quant PM / Portfolio Construction", steps: ["MIT 18.642", "Stanford EE364A", "Boyd & Vandenberghe (หนังสือ)", "Haugh — QRM", "Empirical asset pricing", "Research-validation stack", "Transaction-cost-aware portfolio construction"] },
-    { icon: "🎯", title: "Options / Volatility / Derivatives", steps: ["MIT 18.642", "Haugh — Foundations of FE", "Haugh — Continuous-Time Models", "Haugh — Monte Carlo", "Gatheral — Volatility Workshop", "SVI (Gatheral-Jacquier)", "Stochastic / rough volatility literature ตาม specialization"] },
-    { icon: "💳", title: "Credit / Credit Derivatives", steps: ["Haugh — Foundations of FE", "Haugh — QRM", "Duffie — Credit Risk", "Open Source Bond Asset Pricing", "Specialized CDS / structured-credit literature"] },
-    { icon: "⚡", title: "Execution / Microstructure / HFT", steps: ["Hasbrouck — STPP", "Almgren-Chriss", "Gatheral — market impact literature", "Transient impact", "Cross-impact", "Nasdaq ITCH / CME MDP", "Empirical calibration จาก order-level data"] },
-    { icon: "🤖", title: "ML for Quant", steps: ["MIT 18.065", "CS229 หรือ Berkeley CS189", "ISLR / ESL", "Research Validation stack", "Gu-Kelly-Xiu", "Kelly-Xiu", "Application-specific papers"],
+    { icon: "briefcase", title: "Investment / Portfolio Management", steps: ["MIT 15.401 Finance Theory I", "Damodaran (NYU)", "Cochrane — Asset Pricing", "MIT 18.642", "Stanford EE364A", "Haugh — Quantitative Risk Management", "Open Asset Pricing / JKP / AQR Data"] },
+    { icon: "landmark", title: "Fundamental Investing / Valuation", steps: ["MIT Financial Accounting (ถ้าจำเป็น)", "MIT 15.401", "Damodaran", "Cochrane (ตามความต้องการด้าน Asset Pricing)", "Empirical datasets ตาม strategy"] },
+    { icon: "flask", title: "Systematic Alpha Research", steps: ["MIT 18.642", "Sheppard — Financial Econometrics", "MIT 14.384 (ตามความจำเป็น)", "Harvey/Liu + HLZ + PBO + Deflated Sharpe", "Backtesting Protocol (Arnott-Harvey-Markowitz)", "Open Source Asset Pricing + JKP", "Stanford CS229", "Gu-Kelly-Xiu", "Kelly-Xiu"] },
+    { icon: "calc", title: "Quant PM / Portfolio Construction", steps: ["MIT 18.642", "Stanford EE364A", "Boyd & Vandenberghe (หนังสือ)", "Haugh — QRM", "Empirical asset pricing", "Research-validation stack", "Transaction-cost-aware portfolio construction"] },
+    { icon: "target", title: "Options / Volatility / Derivatives", steps: ["MIT 18.642", "Haugh — Foundations of FE", "Haugh — Continuous-Time Models", "Haugh — Monte Carlo", "Gatheral — Volatility Workshop", "SVI (Gatheral-Jacquier)", "Stochastic / rough volatility literature ตาม specialization"] },
+    { icon: "credit", title: "Credit / Credit Derivatives", steps: ["Haugh — Foundations of FE", "Haugh — QRM", "Duffie — Credit Risk", "Open Source Bond Asset Pricing", "Specialized CDS / structured-credit literature"] },
+    { icon: "bolt", title: "Execution / Microstructure / HFT", steps: ["Hasbrouck — STPP", "Almgren-Chriss", "Gatheral — market impact literature", "Transient impact", "Cross-impact", "Nasdaq ITCH / CME MDP", "Empirical calibration จาก order-level data"] },
+    { icon: "cpu", title: "ML for Quant", steps: ["MIT 18.065", "CS229 หรือ Berkeley CS189", "ISLR / ESL", "Research Validation stack", "Gu-Kelly-Xiu", "Kelly-Xiu", "Application-specific papers"],
       note: "จะไม่แนะนำ ML มาก่อน research validation — model ที่ search parameter/function space ได้กว้างขึ้น ก็สามารถ search noise ได้เก่งขึ้นเหมือนกัน" },
-    { icon: "🧠", title: "Modern AI / LLM", steps: ["Karpathy — Zero to Hero", "MIT 6.S191", "Stanford CS336", "CS224N (ตามความสนใจ)", "Specialized papers"],
+    { icon: "spark", title: "Modern AI / LLM", steps: ["Karpathy — Zero to Hero", "MIT 6.S191", "Stanford CS336", "CS224N (ตามความสนใจ)", "Specialized papers"],
       note: "ถ้าจะใช้ LLM กับ historical financial research ให้เพิ่ม point-in-time / temporal-leakage literature เข้าไปด้วย" }
   ],
 

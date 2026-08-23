@@ -4,58 +4,78 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free Knowledge Map — Finance · Quant · ML · AI</title>
-<meta name="description" content="แผนที่รวมคอร์ส หนังสือ งานวิจัย และ datasets ฟรี สำหรับ Finance, Investment, Quant, Trading, Econometrics, Portfolio, Microstructure, Machine Learning และ AI">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+<meta name="description" content="แผนที่รวมคอร์ส หนังสือ งานวิจัย และ datasets ฟรี สำหรับ Finance, Investment, Quant, Trading, Econometrics, Portfolio, Microstructure, Machine Learning และ AI — ลิสต์ต้นฉบับโดยเพจ JRT Desk พาXวย">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%2360a5fa'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpolygon%20points='1%206%201%2022%208%2018%2016%2022%2023%2018%2023%202%2016%206%208%202%201%206'/%3E%3Cline%20x1='8'%20y1='2'%20x2='8'%20y2='18'/%3E%3Cline%20x1='16'%20y1='6'%20x2='16'%20y2='22'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
 
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="#top">🗺️ <span>Knowledge&nbsp;Map</span></a>
+    <a class="brand" href="#top">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+      <span>Knowledge&nbsp;Map</span>
+    </a>
     <div class="searchbox">
-      <span class="s-icon">🔍</span>
-      <input id="q" type="search" placeholder="ค้นหา  เช่น volatility, Damodaran, 18.642, backtest…  (กด / )" aria-label="ค้นหา">
+      <span class="s-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+      <input id="q" type="search" placeholder="ค้นหาคอร์ส / หนังสือ / ผู้แต่ง / สถาบัน… (กด / เพื่อโฟกัส)">
     </div>
     <div class="topbar-right">
-      <span id="stats" class="stats" title="รายการที่แสดง / ทั้งหมด"></span>
-      <button id="themeBtn" class="iconbtn" title="สลับโหมดสว่าง/มืด">🌙</button>
+      <span class="stats" id="stats"></span>
+      <button class="iconbtn" id="themeBtn" title="สลับธีม"></button>
     </div>
   </div>
 </header>
 
-<div class="layout" id="top">
+<div class="layout">
 
-  <aside class="sidebar" id="sidebar">
-    <nav id="nav" class="nav" aria-label="Sections"></nav>
+  <aside class="sidebar">
+    <nav class="nav" id="nav"></nav>
     <div class="side-block">
-      <h4>ระดับความสำคัญ <span class="hint">(เลือกได้หลายอัน)</span></h4>
-      <div id="tagFilters" class="tagfilters"></div>
-      <button id="clearBtn" class="clearbtn">ล้างตัวกรองทั้งหมด</button>
+      <h4>ตัวกรองระดับ <span class="hint">(กดเพื่อกรอง)</span></h4>
+      <div class="tagfilters" id="tagFilters"></div>
+      <button class="clearbtn" id="clearBtn">ล้างตัวกรองทั้งหมด</button>
     </div>
   </aside>
 
-  <main class="main">
+  <main>
 
     <section class="hero">
-      <h1>Free Knowledge <span class="grad">Map</span></h1>
-      <p class="sub">Finance · Investment · Quant · Trading · Financial Mathematics · Econometrics · Portfolio Construction · Market Microstructure · Machine Learning · AI</p>
+      <h1>Free <span class="grad">Knowledge Map</span></h1>
+      <p class="sub">Finance · Investment · Quant · Trading · Financial Math · Econometrics · Portfolio · Microstructure · ML · AI</p>
       <p class="tagline" id="tagline"></p>
+      <div class="attribution" id="attribution"></div>
       <div class="metachips" id="metachips"></div>
       <div class="access" id="access"></div>
     </section>
 
     <div id="content"></div>
 
+    <section class="panel" id="indexPanel">
+      <h2 class="section-h">
+        <span class="icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span>
+        Index รายวิชา — ใครเป็นผู้สอน / เจ้าของคอร์ส
+      </h2>
+      <p class="section-sub">รวมทุกรายการใน knowledge map พร้อมผู้สอน/ผู้แต่งและสถาบันที่เปิดเผยแพร่ — รายการที่ไม่ระบุชื่อผู้สอนคือคอร์ส/งานที่ต้นฉบับไม่ได้ระบุ ดูสถาบันแหล่งเผยแพร่แทน</p>
+      <div id="indexTable"></div>
+    </section>
+
     <section class="panel" id="pathsPanel">
-      <h2 class="section-h"><span class="icon">🧭</span> Shortest Path — เส้นทางลัดตามเป้าหมาย</h2>
+      <h2 class="section-h">
+        <span class="icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+        Shortest Path — เส้นทางเรียนตามเป้าหมาย
+      </h2>
       <p class="section-sub">ถ้ามีพื้นฐานอยู่แล้ว ไม่ต้องเรียนหลายสิบอย่าง — เลือกตาม objective ก็พอ</p>
       <div class="paths" id="paths"></div>
     </section>
 
     <section class="panel" id="methodPanel">
-      <h2 class="section-h"><span class="icon">⚠️</span> <span id="methodTitle"></span></h2>
+      <h2 class="section-h">
+        <span class="icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+        <span id="methodTitle"></span>
+      </h2>
       <p class="lead" id="methodLead"></p>
+
       <div class="method-grid">
         <div class="method-col">
           <h3>คำถามที่ควรถามก่อนเชื่อ backtest</h3>
@@ -69,16 +89,21 @@
           <ul class="checklist" id="checklist"></ul>
         </div>
       </div>
+
       <div class="principles" id="principles"></div>
     </section>
 
     <section class="panel" id="notCoveredPanel">
-      <h2 class="section-h"><span class="icon">🚧</span> <span id="notCoveredTitle"></span></h2>
+      <h2 class="section-h">
+        <span class="icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></span>
+        <span id="notCoveredTitle"></span>
+      </h2>
       <ul class="notcovered" id="notCovered"></ul>
       <p class="notcovered-note" id="notCoveredNote"></p>
     </section>
 
     <footer class="footer">
+      <p id="footSource"></p>
       <p id="footCopyright"></p>
       <p id="footDisclaimer"></p>
       <p class="foot-meta" id="footMeta"></p>
@@ -87,7 +112,9 @@
   </main>
 </div>
 
-<a href="#top" class="totop" id="totop" title="กลับขึ้นด้านบน">↑</a>
+<a href="#top" class="totop" id="totop" title="กลับขึ้นด้านบน">
+  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</a>
 
 <script src="data.js"></script>
 <script src="app.js"></script>
